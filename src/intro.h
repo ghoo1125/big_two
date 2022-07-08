@@ -1,0 +1,3255 @@
+void  blushl()
+{
+      setcolor(12);
+      setbkcolor(15);
+      setfillstyle(4,12);  //  1,3,8,10,11
+      rectangle(95*2,103*2,118*2,116*2);
+      rectangle(134*2,102*2,164*2,118*2);
+      floodfill(96*2,104*2,12);
+      floodfill(135*2,103*2,12);
+      setcolor(15);            
+      rectangle(95*2,103*2,118*2,116*2);
+      rectangle(134*2,102*2,164*2,118*2);
+      setbkcolor(0);
+}
+
+void blushr()
+{
+     setcolor(12);
+     setbkcolor(15);
+     setfillstyle(4,12);
+     rectangle(158*2,100*2,188*2,116*2);
+     rectangle(206*2,103*2,228*2,116*2);
+     floodfill(159*2,101*2,12);
+     floodfill(207*2,104*2,12);
+     setcolor(15);            
+     rectangle(158*2,100*2,188*2,116*2);
+     rectangle(206*2,103*2,228*2,116*2);
+     setbkcolor(0);
+}
+
+int a=20;
+// 14 yellow   13 pink   9 blue  10 green
+
+void headl()
+{
+     int i,j,k;
+     int l=0,h=0;
+     int b[10]={l,h,l+a,h,l+a,h+a,l,h+a,l,h};
+     //fillpoly(5,b);
+     for(j=1;j<7;j++)
+       for(i=0;i<10;i+=2)
+          b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(j=7;j<27;j++)
+     {
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;
+     }
+     
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+         
+     for(j=1;j<9;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     fillpoly(5,b);       //  9 11 13 15 17
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     
+     for(j=0;j<7;j++)         //  19~26
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       }
+       
+     for(i=1;i<10;i+=2)       //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=1;j<9;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     
+     setcolor(9);
+     setfillstyle(1,9);
+     
+     fillpoly(5,b);       //  9 11 13 15 17
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+         
+     setcolor(10);
+     setfillstyle(1,10);
+     
+     for(i=0;i<10;i+=2)     //  19 21 23
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<8;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+         
+     for(j=0;j<10;j++)         //  9~19
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       }   
+              
+     for(i=0;i<10;i+=2)     // 21 23
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+         b[i]+=a;
+     fillpoly(5,b);
+    
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<17;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+     for(j=0;j<5;j++)         //  19~23
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       }  
+       
+    setcolor(15);
+    setfillstyle(1,15);
+    for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<8;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+      for(j=0;j<8;j++)         //  10~17
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       }  
+
+       for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<7;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b);
+     
+     setcolor(15);
+     setfillstyle(1,15);
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     
+      for(j=0;j<8;j++)         //  10~17
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       } 
+       
+     setcolor(14);
+     setfillstyle(1,14);      //  19 21 23
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(j=0;j<7;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b); 
+     for(j=0;j<5;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     setcolor(15);
+     setfillstyle(1,15);
+     fillpoly(5,b); 
+     setcolor(14);
+     setfillstyle(1,14);
+     for(j=0;j<6;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;    
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(j=0;j<11;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     setcolor(15);
+     setfillstyle(1,15);
+     fillpoly(5,b); 
+     for(j=0;j<4;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     fillpoly(5,b);    
+     for(j=0;j<3;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     
+for(int k=0;k<3;k++)
+{
+        for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<7;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b);
+     
+     setcolor(15);
+     setfillstyle(1,15);
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     
+      for(j=0;j<3;j++)         //  10~17
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       } 
+       for(i=0;i<10;i+=2)
+            b[i]+=a;
+       for(j=0;j<4;j++)         
+       { 
+        for(i=0;i<10;i+=2)
+            b[i]+=a;
+        fillpoly(5,b);
+       } 
+       
+     setcolor(14);
+     setfillstyle(1,14);      //  19 21 23
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+}
+
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<7;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b);
+     
+     setcolor(15);
+     setfillstyle(1,15);
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     fillpoly(5,b);  
+     for(j=0;j<4;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     for(i=0;i<10;i+=2)
+       b[i]+=a;
+     fillpoly(5,b);  
+     setcolor(14);
+     setfillstyle(1,14);      //  19 21 23
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<7;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b);
+     setcolor(15);
+     setfillstyle(1,15);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     setcolor(14);
+     setfillstyle(1,14);      //  19 21 23
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(j=0;j<6;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     
+     setcolor(14);
+     setfillstyle(1,14);
+     fillpoly(5,b);
+     setcolor(15);
+     setfillstyle(1,15);
+     for(j=0;j<2;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(j=0;j<3;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     setcolor(14);
+     setfillstyle(1,14);      //  19 21 23
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);  
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(j=0;j<3;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(15);
+     setfillstyle(1,15);
+   for(j=0;j<8;j++)  
+    {
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+    }
+    setcolor(14);
+    setfillstyle(1,14);      //  19 21 23
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);  
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);  
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(j=0;j<3;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(15);
+     setfillstyle(1,15);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     setcolor(14);
+     setfillstyle(1,14);
+     for(j=0;j<5;j++)
+     {
+      for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     }   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(j=0;j<2;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;  
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(14);
+     setfillstyle(1,14);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b); 
+     for(j=0;j<4;j++)
+     {
+      for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     }          
+     for(i=0;i<10;i+=2)
+        b[i]+=a;        
+     for(j=0;j<3;j++)
+     {
+      for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     }   
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);                
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(13);
+     setfillstyle(1,13);
+     fillpoly(5,b);                
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(10);
+     setfillstyle(1,10);
+     fillpoly(5,b);
+     for(j=0;j<3;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     setcolor(14);
+     setfillstyle(1,14);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(j=0;j<3;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);  
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     setcolor(9);
+     setfillstyle(1,9);
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a; 
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(14);
+     setfillstyle(1,14);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);    
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+          
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(14);
+     setfillstyle(1,14);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     setcolor(9);
+     setfillstyle(1,9);
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     setcolor(9);
+     setfillstyle(1,9);
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     setcolor(9);
+     setfillstyle(1,9);
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     
+     for(j=0;j<11;j++)
+     {
+       for(i=0;i<10;i+=2)
+        b[i]+=a;                 
+     }
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     
+    
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+     setcolor(13);
+     setfillstyle(1,13);
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(13);
+     setfillstyle(1,13);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(9);
+     setfillstyle(1,9);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+     for(i=0;i<10;i+=2)
+        b[i]+=a;
+     fillpoly(5,b);   
+}
+
+void headr()
+{
+     int i,j,k;
+     int l=-20,h=0;
+     int b[10]={l,h,l+a,h,l+a,h+a,l,h+a,l,h};
+    
+     for(j=0;j<6;j++)       //black
+       for(i=0;i<10;i+=2)    
+          b[i]+=a;
+     setcolor(10);
+     setfillstyle(1,10);
+     for(j=0;j<20;j++)
+     {
+      for(i=0;i<10;i+=2)
+        b[i]+=a;
+      fillpoly(5,b);
+     }
+     
+     for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+     b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+         
+     for(j=0;j<7;j++)
+       for(i=0;i<10;i+=2)    //  black
+         b[i]+=a;
+     for(j=0;j<7;j++)  
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(9);
+      setfillstyle(1,9);
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      for(j=0;j<10;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<15;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(15);
+      setfillstyle(1,15);
+      for(j=0;j<8;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      for(j=0;j<3;j++)
+      {
+       setcolor(14);
+       setfillstyle(1,14);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(15);
+      setfillstyle(1,15);
+      for(j=0;j<8;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      setcolor(14);
+      setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;
+      for(i=0;i<10;i+=2)
+        b[i]+=a;
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      for(j=0;j<3;j++)
+      {
+       setcolor(14);
+       setfillstyle(1,14);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(15);
+      setfillstyle(1,15);
+      for(j=0;j<4;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(j=0;j<4;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(14);
+      setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(15);
+      setfillstyle(1,15);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(15);
+      setfillstyle(1,15);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+  
+for(k=0;k<3;k++)
+{    for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(14);
+      setfillstyle(1,14); 
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(15);
+      setfillstyle(1,15); 
+      for(j=0;j<4;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      setcolor(14);
+      setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+}         
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(14);
+      setfillstyle(1,14); 
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(15);
+      setfillstyle(1,15);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      setcolor(14);setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+             
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(14);
+      setfillstyle(1,14); 
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(15);setfillstyle(1,15);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);                
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      setcolor(14);setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);                
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<9;j++)
+        for(i=0;i<10;i+=2)    //  black
+           b[i]+=a;
+      setcolor(14);
+      setfillstyle(1,14); 
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+      }
+      setcolor(15);setfillstyle(1,15);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                
+      }
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                
+      }
+      setcolor(14);setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);                
+      
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<6;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                               
+      }
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                     
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      setcolor(15);setfillstyle(1,15);
+      for(j=0;j<8;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                               
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      setcolor(14);setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);                               
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);                               
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);                               
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                               
+      }
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                               
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                               
+      }                              
+      setcolor(15);setfillstyle(1,15);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                               
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                               
+      }  
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                               
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      setcolor(14);setfillstyle(1,14);   
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                               
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                               
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                               
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);                               
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(14);setfillstyle(1,14);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      for(i=0;i<10;i+=2)
+         b[i]+=a;
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(14);setfillstyle(1,14);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                                                        
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<7;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(14);setfillstyle(1,14);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+       fillpoly(5,b);
+      }
+      for(j=0;j<6;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(9);setfillstyle(1,9);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;   
+       fillpoly(5,b);                           
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(10);setfillstyle(1,10);
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      setcolor(10);setfillstyle(1,10);
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;                              
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);                              
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<6;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;  
+       fillpoly(5,b);
+       for(i=0;i<10;i+=2)
+         b[i]+=a;  
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                              
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                    
+       fillpoly(5,b);          
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(j=0;j<4;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;                    
+       fillpoly(5,b);          
+      }
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);
+      for(j=0;j<4;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      setcolor(10);setfillstyle(1,10);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       for(i=0;i<10;i+=2)
+         b[i]+=a;
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      setcolor(9);setfillstyle(1,9);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+        b[i]+=a;  
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;    
+      }
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      setcolor(9);setfillstyle(1,9);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      }
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      setcolor(10);setfillstyle(1,10);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);          
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      setcolor(10);setfillstyle(1,10);          
+      for(j=0;j<6;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      setcolor(9);setfillstyle(1,9);          
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(13);setfillstyle(1,13);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);          
+      for(j=0;j<5;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(10);setfillstyle(1,10);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<11;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(13);setfillstyle(1,13);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      setcolor(10);setfillstyle(1,10);          
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(13);setfillstyle(1,13);          
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(10);setfillstyle(1,10);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(13);setfillstyle(1,13);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);          
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(13);setfillstyle(1,13);          
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(j=0;j<3;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      } 
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=1;i<10;i+=2)        //  update x y
+         b[i]+=a;               
+      b[0]=b[6]=b[8]=l;  b[2]=b[4]=l+a;
+      for(j=0;j<2;j++)
+      {
+       for(i=0;i<10;i+=2)
+         b[i]+=a;          
+       fillpoly(5,b);
+      } 
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      setcolor(13);setfillstyle(1,13);
+      for(j=0;j<4;j++)
+      {
+       for(i=0;i<10;i+=2)
+          b[i]+=a;          
+       for(i=0;i<10;i+=2)
+          b[i]+=a;          
+       fillpoly(5,b);
+      }
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(9);setfillstyle(1,9);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(10);setfillstyle(1,10);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      setcolor(13);setfillstyle(1,13);
+      for(i=0;i<10;i+=2)
+         b[i]+=a;          
+      fillpoly(5,b);
+      
+}
+
+void intro()
+{
+setcolor(15);
+settextstyle(8,0,0);
+setusercharsize(2,1,3,1);
+outtextxy(300,250,"老二");
+delay(1000);cleardevice();
+headl();   
+delay(1000);cleardevice();
+headr();   
+delay(1000);cleardevice();
+setcolor(14);
+outtextxy(300,250,"好大");
+delay(600);cleardevice();
+
+headl();blushl();
+setcolor(15);setbkcolor(0);
+outtextxy(700,20,"誰");
+delay(400);cleardevice();
+headr();blushr();
+setcolor(15);setbkcolor(0);
+outtextxy(700,100,"誰");
+delay(400);cleardevice();
+headl();blushl();
+setcolor(15);setbkcolor(0);
+outtextxy(700,180,"誰");
+delay(400);cleardevice();
+headr();blushr();
+setcolor(15);setbkcolor(0);
+outtextxy(700,260,"誰");
+delay(400);cleardevice();
+/* 
+headl();blushl();  
+setcolor(15);setbkcolor(0);
+outtextxy(700,100,"誰");
+delay(300);cleardevice();
+headr();blushr();  
+setcolor(15);setbkcolor(0);
+outtextxy(700,180,"誰");
+delay(300);cleardevice();
+headl();blushl();  
+setcolor(15);setbkcolor(0);
+outtextxy(700,260,"誰");
+delay(300);cleardevice();
+headr();blushr();  
+setcolor(15);setbkcolor(0);
+outtextxy(700,340,"誰");
+delay(300);cleardevice();
+
+outtextxy(300,250,"誰是");
+delay(800);cleardevice();
+setcolor(14);
+outtextxy(150,250,"大  老  二  ?");
+delay(1000);cleardevice();
+headr();blushr();
+delay(1000);cleardevice();
+
+outtextxy(200,250,"不就是那個");
+delay(800);cleardevice();
+
+setcolor(14);
+outtextxy(300,250,"偉大的");
+delay(800);cleardevice();
+
+headl();blushl();
+delay(1000);cleardevice();
+
+setcolor(14);
+outtextxy(300,250,"名探偵");
+delay(800);cleardevice();
+headr();
+delay(1000);cleardevice();
+
+setcolor(11);
+outtextxy(200,250,"毛利小五郎");
+delay(1000);cleardevice();
+
+headl();
+delay(1000);cleardevice();
+
+setcolor(15);
+outtextxy(300,250,"是也!");*/
+delay(500);cleardevice();
+
+
+
+}
+
